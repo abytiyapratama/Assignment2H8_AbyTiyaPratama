@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="init()">
+    <style>
+        body {
+         background-color: #A9A9A9;
+        }
+      </style>
+    <nav class="navbar navbar-expand-sm navbar-dark" id="nav" style="background-color: #0B6623;">
+        <a class="navbar-brand" href="beranda.html">Hactiv8</a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+            aria-expanded="false" aria-label="Toggle navigation"></button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#" style="color:white;">Profil<span class="sr-only" ></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color:white;">Portofolio</a>
+                </li>
+                
+            <li class="nav-item dropdown">
+                <a class="btn text-white dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                  Tutorial
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">HTML</a>
+                  <a class="dropdown-item" href="#">CSS</a>
+                  <a class="dropdown-item" href="#">Javascript</a>
+                  <a class="dropdown-item" href="#">JQuery</a>
+                  <a class="dropdown-item" href="#">Codeigniter</a>
+                </div>
+              </li>
+            </ul> 
+        </div>
+    </nav>
+
+    <div id="profil" class="jumbotron jumbotron-fluid" style="background-color: #A9A9A9;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2  px-5 px-5 d-flex left-content-center" style="background-color: #9CAF88;">
+                    <img class="owi " src="asset/img/owi.jpg" alt="" height="200" width="150" style="margin-top: 20px;" />
+                </div>
+                <div class="col-md-3 d-flex left-content-center" style="background-color: #9CAF88;">
+                    <figure>
+                    <br>
+                    <br>
+                     <h4 style="text-align:justify" class="nama">Nama</h4>
+                     <p style="text-align:justify" class="bidang">Bidang</p>
+                     <br>
+                     <input type="submit" class="btn btn-primary" value="Edit" onclick="showForm()">
+                     <button class="btn btn-outline-primary resume">Resume</button>
+                    </figure>
+                </div>
+                <div class="col-md-2 d-flex left-content-center" style="background-color: #9CAF88;">
+                    <figure>
+                    <br>
+                     <p style="text-align:justify" class="avail1">Availability</p>
+                     <p style="text-align:justify" class="usia1">Usia</p>
+                     <p style="text-align:justify" class="lokasi1">Lokasi</p>
+                     <p style="text-align:justify" class="pengalaman1">Pengalaman</p>
+                     <p style="text-align:justify" class="email1">Email</p>
+                    </figure>
+                </div>
+                <div class="col-md-5 d-flex left-content-center" style="background-color: #9CAF88;">
+                    <figure>
+                    <br>
+                     <p style="text-align:left" class="avail"></p>
+                     <p style="text-align:left" class="usia"></p>
+                     <p style="text-align:left" class="lokasi"></p>
+                     <p style="text-align:left" class="pengalaman"></p>
+                     <p style="text-align:left" class="email"></p>
+                    </figure>
+                    
+                </div>
+        </div>
+
+        </div>
+    </div>
+    <hr>
+    <div class="container">
+        <form id="form1" class="form1" onsubmit="return false">
+            <div class="form-group">
+                <label for="fname">Nama :</label>
+                <input type="text" name="fname" id="nama_input" class="form-control col-md-12 d-flex justify-content-center">
+            </div>
+            <div class="form-group">
+                <label for="fname">Role :</label>
+                <input type="text" name="fname" id="role_input" class="form-control col-md-12 d-flex justify-content-center">
+            </div>
+            <div class="form-group">
+                <label for="fname">Availability :</label>
+                <input type="text" name="fname" id="avail_input" class="form-control col-md-12 d-flex justify-content-center">
+            </div>
+            <div class="form-group">
+                <label for="lname">Age :</label>
+                <input type="number" min="17" max="90" name="umur" id="umur_input" class="form-control col-md-12 d-flex justify-content-center" />
+            </div>
+            <div class="form-group">
+                <label for="fname">Lokasi :</label>
+                <input type="text" name="fname" id="lokasi_input" class="form-control col-md-12 d-flex justify-content-center">
+            </div>
+            <div class="form-group">
+                <label for="lname">Years Experience :</label>
+                <input type="number" min="2" max="90" name="Pengalaman" id="pengalaman_input" class="form-control col-md-12 d-flex justify-content-center" />
+            </div>
+            <div class="form-group">
+                <label for="lname">Email :</label>
+                <input type="email" name="lname" id="email_input" class="form-control col-md-12 d-flex justify-content-center">
+            </div>
+            <input type="submit" class="btn btn-primary col-12" value="Submit" onclick="SimpanForm()" >
+        </form>
+    </div>
+    
+<!-- Script Assets -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+<script src="./script.js"></script>
+</body>
+</html>
